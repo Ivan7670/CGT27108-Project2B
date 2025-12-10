@@ -1,0 +1,308 @@
+<!--ALL CODE IS AI GENERATED UNLESS THERE IS A COMMENT DISCUSSING CHANGES OR ADDITIONS--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Seat - Window Seat Views & Aviation Photography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VYDL7YHEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9VYDL7YHEK');
+</script>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <a class="navbar-brand" href="index.html">Window Seat</a>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="gallery.html">Full Gallery</a>
+                    <a class="nav-link" href="map.html">Flight Map & Challenges</a>
+                    <button class="btn btn-submit" data-bs-toggle="modal" data-bs-target="#submitModal">
+                        Submit Photo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section class="hero">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1>Window seats.<br>Worth the view.</h1>
+                        <p>Flight can feel routine. But 30,000 feet up, the world looks different. This gallery celebrates the travelers who remember to look outside—and capture what most people miss.</p>
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary-cta" data-bs-toggle="modal" data-bs-target="#submitModal">
+                                <i class="bi bi-camera"></i> Share Your View
+                            </button>
+                            <a href="gallery.html" class="btn btn-secondary-cta">
+                                Explore Gallery
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clouds-bottom">
+            <div class="cloud-bottom cloud-bottom-1"></div>
+            <div class="cloud-bottom cloud-bottom-2"></div>
+            <div class="cloud-bottom cloud-bottom-3"></div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="carousel-wrapper">
+                <div class="row-header">
+                    <div>
+                        <h2 class="row-title">First Class Views</h2>
+                        <p class="row-description">The most liked images from our community</p>
+                    </div>
+                    <span class="row-number">ROW 1</span>
+                </div>
+                <button class="scroll-btn scroll-left" onclick="scrollRow('homeRow1', -400)">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="photo-grid" id="homeRow1"></div>
+                <button class="scroll-btn scroll-right" onclick="scrollRow('homeRow1', 400)">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="row-header">
+                    <div>
+                        <h2 class="row-title">Main Cabin Favorites</h2>
+                        <p class="row-description">Popular images from our main collection</p>
+                    </div>
+                    <span class="row-number">ROW 2</span>
+                </div>
+                <button class="scroll-btn scroll-left" onclick="scrollRow('homeRow2', -400)">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="photo-grid" id="homeRow2"></div>
+                <button class="scroll-btn scroll-right" onclick="scrollRow('homeRow2', 400)">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="row-header">
+                    <div>
+                        <h2 class="row-title">Exit Row Specials</h2>
+                        <p class="row-description">Unique and extraordinary window seat captures</p>
+                    </div>
+                    <span class="row-number">ROW 3</span>
+                </div>
+                <button class="scroll-btn scroll-left" onclick="scrollRow('homeRow3', -400)">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="photo-grid" id="homeRow3"></div>
+                <button class="scroll-btn scroll-right" onclick="scrollRow('homeRow3', 400)">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Challenge Standings -->
+    <section class="gallery-section" style="background: linear-gradient(135deg, #4a90e2 0%, #67a3e8 100%); color: white; border-top: 2px solid #dee2e6;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white; margin-bottom: 10px;">🏆 Weekly Competition Standings</h2>
+                <p style="color: rgba(255,255,255,0.9); margin-bottom: 30px;" id="weeklyCompetitionTitle"></p>
+            </div>
+            <div class="competition-entries" id="homeCompetitionEntries" style="max-width: 1200px; margin: 0 auto;"></div>
+            <div class="text-center mt-4">
+                <a href="map.html#weekly-competition" class="btn btn-secondary-cta" style="background: white; color: #4a90e2; border: 2px solid white;">View Full Competition</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Preview Section -->
+    <section class="gallery-section" style="background: linear-gradient(135deg, #f0f8ff 0%, #e3f2fd 100%); color: #1a1a1a; border-top: 2px solid #dee2e6;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: #1a1a1a;">Join the Challenge</h2>
+                <p style="color: #6c757d;">Earn points, complete quests, and compete for weekly prizes</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%); padding: 30px; border-radius: 16px; border: 2px solid #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15); height: 100%; transition: all 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.borderColor='#67a3e8'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#4a90e2'; this.style.transform='translateY(0)'">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🎯</div>
+                        <h4 style="color: #1a1a1a; margin-bottom: 15px;">Personal Challenges</h4>
+                        <p style="color: #6c757d; margin-bottom: 20px; flex-grow: 1;">Complete daily and weekly challenges to earn points. Submit photos, get likes, and explore new routes.</p>
+                        <a href="map.html#personal-challenges" class="btn btn-primary-cta" style="width: 100%; margin-top: auto;">View Challenges</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%); padding: 30px; border-radius: 16px; border: 2px solid #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15); height: 100%; transition: all 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.borderColor='#67a3e8'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#4a90e2'; this.style.transform='translateY(0)'">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🏆</div>
+                        <h4 style="color: #1a1a1a; margin-bottom: 15px;">Weekly Competition</h4>
+                        <p style="color: #6c757d; margin-bottom: 20px; flex-grow: 1;">Compete for the best photo each week. Winners receive prizes and featured spots in our gallery.</p>
+                        <a href="map.html#weekly-competition" class="btn btn-primary-cta" style="width: 100%; margin-top: auto;">See Competition</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%); padding: 30px; border-radius: 16px; border: 2px solid #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15); height: 100%; transition: all 0.3s; display: flex; flex-direction: column;" onmouseover="this.style.borderColor='#67a3e8'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#4a90e2'; this.style.transform='translateY(0)'">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🌍</div>
+                        <h4 style="color: #1a1a1a; margin-bottom: 15px;">Location Quests</h4>
+                        <p style="color: #6c757d; margin-bottom: 20px; flex-grow: 1;">Help us map the world! Submit photos from underrepresented locations and earn special rewards.</p>
+                        <a href="map.html#location-challenges" class="btn btn-primary-cta" style="width: 100%; margin-top: auto;">Explore Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="gallery-section" style="background: linear-gradient(135deg, #4a90e2 0%, #67a3e8 100%); color: white; padding: 80px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.2); height: 300px;">
+                        <div style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
+                        <h2 style="color: white; margin-bottom: 15px; font-weight: 700;">Our Mission</h2>
+                        <p style="color: rgba(255, 255, 255, 0.95); font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            To see and show the world from new perspectives, one window at a time.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.2); height: 300px;">
+                        <div style="font-size: 3rem; margin-bottom: 20px;">✨</div>
+                        <h2 style="color: white; margin-bottom: 15px; font-weight: 700;">Our Vision</h2>
+                        <p style="color: rgba(255, 255, 255, 0.95); font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            To reveal the magic of flight through the art of the world from above.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Window Seat</h3>
+                <p class="footer-text">
+                    A community space for aviation enthusiasts to share window seat views from around the world. 
+                    We believe that sometimes, if you look outside, you may see something you've never seen before.
+                </p>
+                <div class="footer-bottom">
+                    2024 Window Seat. All photos belong to their respective contributors.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Detail Modal -->
+    <div class="modal fade image-detail-modal" id="imageDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModalTitle">Photo Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="detailModalImage" src="" alt="Photo">
+                    <div class="image-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Route</div>
+                            <div class="detail-value" id="detailRoute"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Author</div>
+                            <div class="detail-value" id="detailAuthor"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Likes</div>
+                            <div class="detail-value" id="detailLikes"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Seat</div>
+                            <div class="detail-value" id="detailSeat"></div>
+                        </div>
+                    </div>
+                    <div id="detailDescription" style="color: #6c757d; margin-bottom: 20px;"></div>
+                    <div class="purchase-options">
+                        <button class="purchase-btn purchase-btn-primary" onclick="handlePurchasePrint()">
+                            <i class="bi bi-cart"></i> Purchase Print
+                        </button>
+                        <button class="purchase-btn purchase-btn-secondary" onclick="handleDownloadRights()">
+                            <i class="bi bi-download"></i> Download Rights
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Modal -->
+    <div class="modal fade" id="submitModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Submit Your Photo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="submitForm">
+                        <div class="mb-3">
+                            <label class="form-label">Photo</label>
+                            <input type="file" class="form-control" id="photoInput" accept="image/*" required>
+                            <img id="imagePreview" class="image-preview" alt="Preview">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" id="photoTitle" placeholder="Name your photo" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label class="form-label">Departure</label>
+                                <input type="text" class="form-control" id="departure" placeholder="e.g., LAX" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Arrival</label>
+                                <input type="text" class="form-control" id="arrival" placeholder="e.g., JFK" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="authorName" placeholder="How should we credit you?" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description (optional)</label>
+                            <textarea class="form-control" id="description" rows="3" placeholder="Tell us about this moment"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-submit" id="submitPhotoBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
